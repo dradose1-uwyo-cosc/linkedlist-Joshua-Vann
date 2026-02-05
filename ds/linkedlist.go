@@ -122,6 +122,7 @@ func (l *LinkedList) Reverse() {
 		i.Next = prev
 		prev = i
 	}
+	l.Head, l.Tail = l.Tail, l.Head
 }
 
 // print the list DONE
@@ -130,5 +131,4 @@ func (l *LinkedList) PrintList() {
 		fmt.Println(i.data)
 	}
 }
-
 
