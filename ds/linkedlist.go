@@ -38,7 +38,11 @@ func (l *LinkedList) InsertAt(position int, value string) error {
 		return errors.New("Invalid Position")
 	} else if position == 0 {
 		l.Size += 1
-		l.Head = &Node{data: value, Next: l.Head.Next}
+		if l.Size == 1 {
+			l.Head = &Node{data: value, Next: nil}
+		} else {
+			l.Head = &Node{data: value, Next: l.Head.Next}
+		}
 	} else {
 		l.Size += 1
 		check := l.Head
