@@ -12,7 +12,7 @@ type Queue struct {
 
 // add tail node
 func (q *Queue) Push(value string) {
-	q.list.RemoveAt(q.list.GetSize() - 1)
+	q.list.InsertAt(q.list.GetSize()-1, value)
 }
 
 // remove the head
