@@ -13,7 +13,6 @@
 package main
 
 import (
-	"_/C_/Users/joshu/Downloads/Homework_1/ds"
 	"fmt"
 	"hw01" //this needs to be changes to your module name and uncommented
 )
