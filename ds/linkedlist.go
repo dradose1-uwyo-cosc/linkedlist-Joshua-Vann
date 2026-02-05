@@ -97,10 +97,8 @@ func (l *LinkedList) RemoveAt(pos int) error {
 		if pos == l.Size-1 {
 			l.Tail = check
 		}
-		//last := check.Next.Next
 		t := check.Next.Next
 		check.Next = t
-		//last.Next = nil
 	}
 	return nil
 }
@@ -118,9 +116,11 @@ func (l *LinkedList) GetSize() int {
 // reverse the list DONE
 func (l *LinkedList) Reverse() {
 	var prev *Node = nil
-	for i := l.Head; i != nil; i = i.Next {
+	for i := l.Head; i != nil; {
+		next := i.Next
 		i.Next = prev
 		prev = i
+		i = next
 	}
 }
 
@@ -130,3 +130,4 @@ func (l *LinkedList) PrintList() {
 		fmt.Println(i.data)
 	}
 }
+
