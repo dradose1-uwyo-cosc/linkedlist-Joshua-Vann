@@ -74,6 +74,7 @@ func main() {
 	stack.Push("third")
 	data, _ := stack.Pop()
 	println("Popped from stack:", data)
+	stack.list.PrintList()
 
 	queue := &ds.Queue{}
 	queue.Push("first")
@@ -81,4 +82,5 @@ func main() {
 	queue.Push("third")
 	data, _ = queue.Pop()
 	println("Popped from queue:", data)
+	queue.list.PrintList()
 }
