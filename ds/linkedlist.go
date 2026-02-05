@@ -97,6 +97,14 @@ func (l *LinkedList) RemoveAt(pos int) error {
 	} else if pos == 0 {
 		l.Size -= 1
 		l.Head = l.Head.Next
+	} else if pos == l.Size-1 {
+		l.Size -= 1
+		check := l.Head
+		for i := 1; i != pos; i++ {
+			check = check.Next
+		}
+		check.Next = nil
+		l.Tail = check
 	} else {
 		l.Size -= 1
 		check := l.Head
