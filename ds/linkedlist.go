@@ -56,7 +56,7 @@ func (l *LinkedList) InsertAt(position int, value string) error {
 	} else {
 		l.Size += 1
 		check := l.Head
-		for i := 0; i < position; i++ {
+		for i := 1; i < position; i++ {
 			check = check.Next
 		}
 		check.Next = &Node{data: value, Next: check.Next}
