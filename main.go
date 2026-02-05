@@ -88,6 +88,7 @@ func main() {
 	linkedlist3.Reverse()
 	linkedlist3.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist3.GetSize())
+	fmt.Println("Is list empty: ", linkedlist3.IsEmpty())
 
 	stack := &ds.Stack{}
 	stack.Push("first")
@@ -103,3 +104,4 @@ func main() {
 	data, _ = queue.Pop()
 	println("Popped from queue:", data)
 }
+
