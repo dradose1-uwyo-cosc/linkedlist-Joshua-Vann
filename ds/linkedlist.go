@@ -74,8 +74,9 @@ func (l *LinkedList) RemoveAll(value string) error {
 	for i := l.Head; i != nil; i = i.Next {
 		if i.data == value {
 			l.RemoveAt(j)
+		} else {
+			j++
 		}
-		j++
 	}
 	return nil
 }
