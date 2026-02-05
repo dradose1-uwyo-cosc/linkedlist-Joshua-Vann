@@ -116,7 +116,8 @@ func (l *LinkedList) GetSize() int {
 // reverse the list DONE
 func (l *LinkedList) Reverse() {
 	var prev *Node = nil
-	for i := l.Head; i != nil; {
+	var next *Node
+	for i := l.Head; i != nil; i = next {
 		next := i.Next
 		i.Next = prev
 		prev = i
