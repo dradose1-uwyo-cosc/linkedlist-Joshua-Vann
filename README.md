@@ -1,6 +1,6 @@
 # Joshua Vann
 ## Assignment #1
-## [Submission date: MM/DD/YY]
+## 2-5-26
 ## Worked with/sources 
 * example
 * example
@@ -10,4 +10,5 @@
 * example
 * example
 * example
+
 
