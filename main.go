@@ -61,6 +61,9 @@ func main() {
 	linkedlist2.RemoveAll("A")
 	linkedlist2.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.Reverse()
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
 
 	stack := &ds.Stack{}
 	stack.Push("first")
