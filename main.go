@@ -14,7 +14,7 @@ package main
 
 import (
 	"fmt"
-	"hw01/ds" //this needs to be changes to your module name and uncommented
+	"linkedlist-Joshua-Vann/ds" //this needs to be changes to your module name and uncommented
 )
 
 func main() {
