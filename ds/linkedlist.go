@@ -47,6 +47,7 @@ func (l *LinkedList) InsertAt(position int, value string) error {
 		}
 		check.Next = &Node{data: value, Next: check.Next}
 	}
+	return nil
 }
 
 // remove first occurrence of the value DONE
@@ -59,6 +60,7 @@ func (l *LinkedList) Remove(value string) error {
 	last.Next.Next = nil
 	last.Next = t
 	l.Size -= 1
+	return nil
 }
 
 // remove all occurrences of a value DONE
@@ -70,6 +72,7 @@ func (l *LinkedList) RemoveAll(value string) error {
 		}
 		j++
 	}
+	return nil
 }
 
 // remove at a position, if index exists DONE
@@ -93,6 +96,7 @@ func (l *LinkedList) RemoveAt(pos int) error {
 		check.Next = t
 		last.Next = nil
 	}
+	return nil
 }
 
 // checks if the linked list is empty DONE
