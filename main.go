@@ -13,6 +13,7 @@
 package main
 
 import (
+	"_/C_/Users/joshu/Downloads/Homework_1/ds"
 	"fmt"
 	"hw01/ds" //this needs to be changes to your module name and uncommented
 )
@@ -22,13 +23,15 @@ func main() {
 
 	linkedlist := &ds.LinkedList{}
 	linkedlist.InsertAt(0, "first")
+	fmt.Println("-------------")
 	linkedlist.PrintList()
+	fmt.Println("-------------")
 	linkedlist.Insert("first")
 	linkedlist.Insert("first")
 	linkedlist.Insert("second")
 	linkedlist.Insert("third")
 	linkedlist.Insert("fourth")
-	linkedlist.Insert("fifth")
+	linkedlist.Insert("fifth") //5th is getting accidentally removed when removing third
 	linkedlist.RemoveAt(4)
 	linkedlist.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist.GetSize())
@@ -40,6 +43,25 @@ func main() {
 	linkedlist.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist.GetSize())
 	fmt.Println("-------------")
+
+	linkedlist2 := &ds.LinkedList{}
+	linkedlist2.Insert("A")
+	linkedlist2.Insert("A")
+	linkedlist2.Insert("A")
+	linkedlist2.Insert("A")
+	linkedlist2.Insert("B")
+	linkedlist2.Insert("C")
+	linkedlist2.Insert("D")
+	linkedlist2.Insert("E")
+	linkedlist2.Insert("F")
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.InsertAt(3, "7")
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.RemoveAll("A")
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
 
 	stack := &ds.Stack{}
 	stack.Push("first")
