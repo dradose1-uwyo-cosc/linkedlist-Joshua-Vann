@@ -78,14 +78,14 @@ func main() {
 	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
 
 	linkedlist3 := &ds.LinkedList{}
-	linkedlist3.insert("a")
-	linkedlist3.reverse()
+	linkedlist3.Insert("a")
+	linkedlist3.Reverse()
 	linkedlist3.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist3.GetSize())
-	linkedlist3.insert("b")
+	linkedlist3.Insert("b")
 	linkedlist3.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist3.GetSize())
-	linkedlist3.reverse()
+	linkedlist3.Reverse()
 	linkedlist3.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist3.GetSize())
 
