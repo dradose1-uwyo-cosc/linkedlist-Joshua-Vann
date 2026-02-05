@@ -44,6 +44,15 @@ func (l *LinkedList) InsertAt(position int, value string) error {
 		} else {
 			l.Head = &Node{data: value, Next: l.Head.Next}
 		}
+	} else if position == l.Size {
+		l.Size += 1
+		if l.Size == 1 {
+			l.Head = &Node{data: value, Next: nil}
+			l.Tail = l.Head
+		} else {
+			l.Tail.Next = &Node{data: value, Next: nil}
+			l.Tail = l.Tail.Next
+		}
 	} else {
 		l.Size += 1
 		check := l.Head
@@ -131,4 +140,3 @@ func (l *LinkedList) PrintList() {
 		fmt.Println(i.data)
 	}
 }
-
