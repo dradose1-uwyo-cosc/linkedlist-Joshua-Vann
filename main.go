@@ -64,6 +64,9 @@ func main() {
 	linkedlist2.Reverse()
 	linkedlist2.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.InsertAt(0, "W")
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
 
 	stack := &ds.Stack{}
 	stack.Push("first")
