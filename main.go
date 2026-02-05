@@ -67,6 +67,15 @@ func main() {
 	linkedlist2.InsertAt(0, "W")
 	linkedlist2.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.RemoveAt(0)
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.RemoveAt(6)
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
+	linkedlist2.Reverse()
+	linkedlist2.PrintList()
+	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
 
 	stack := &ds.Stack{}
 	stack.Push("first")
@@ -74,6 +83,7 @@ func main() {
 	stack.Push("third")
 	data, _ := stack.Pop()
 	println("Popped from stack:", data)
+	stack.list.PrintList()
 
 	queue := &ds.Queue{}
 	queue.Push("first")
@@ -81,4 +91,6 @@ func main() {
 	queue.Push("third")
 	data, _ = queue.Pop()
 	println("Popped from queue:", data)
+	queue.list.PrintList()
 }
+
