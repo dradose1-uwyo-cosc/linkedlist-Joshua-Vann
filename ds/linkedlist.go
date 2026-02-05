@@ -66,6 +66,9 @@ func (l *LinkedList) InsertAt(position int, value string) error {
 
 // remove first occurrence of the value DONE
 func (l *LinkedList) Remove(value string) error {
+	if l.Size == 0 {
+		return errors.New("Unsupported operation on empty list")
+	}
 	var last *Node
 	for i := l.Head; i.data != value; i = i.Next {
 		last = i
@@ -79,6 +82,9 @@ func (l *LinkedList) Remove(value string) error {
 
 // remove all occurrences of a value DONE
 func (l *LinkedList) RemoveAll(value string) error {
+	if l.Size == 0 {
+		return errors.New("Unsupported operation on empty list")
+	}
 	j := 0
 	for i := l.Head; i != nil; i = i.Next {
 		if i.data == value {
@@ -92,6 +98,9 @@ func (l *LinkedList) RemoveAll(value string) error {
 
 // remove at a position, if index exists DONE
 func (l *LinkedList) RemoveAt(pos int) error {
+	if l.Size == 0 {
+		return errors.New("Unsupported operation on empty list")
+	}
 	if pos > l.Size-1 || pos < 0 {
 		return errors.New("Invalid Position")
 	} else if pos == 0 {
