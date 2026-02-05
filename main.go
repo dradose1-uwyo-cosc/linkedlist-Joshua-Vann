@@ -22,6 +22,7 @@ func main() {
 
 	linkedlist := &ds.LinkedList{}
 	linkedlist.InsertAt(0, "first")
+	linkedlist.PrintList()
 	linkedlist.Insert("first")
 	linkedlist.Insert("first")
 	linkedlist.Insert("second")
@@ -54,4 +55,3 @@ func main() {
 	data, _ = queue.Pop()
 	println("Popped from queue:", data)
 }
-
