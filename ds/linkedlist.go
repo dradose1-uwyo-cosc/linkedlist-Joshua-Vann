@@ -40,6 +40,7 @@ func (l *LinkedList) InsertAt(position int, value string) error {
 		l.Size += 1
 		if l.Size == 1 {
 			l.Head = &Node{data: value, Next: nil}
+			l.Tail = l.Head
 		} else {
 			l.Head = &Node{data: value, Next: l.Head.Next}
 		}
@@ -95,10 +96,10 @@ func (l *LinkedList) RemoveAt(pos int) error {
 		if pos == l.Size-1 {
 			l.Tail = check
 		}
-		last := check.Next.Next
+		//last := check.Next.Next
 		t := check.Next.Next
 		check.Next = t
-		last.Next = nil
+		//last.Next = nil
 	}
 	return nil
 }
@@ -128,3 +129,4 @@ func (l *LinkedList) PrintList() {
 		fmt.Println(i.data)
 	}
 }
+
