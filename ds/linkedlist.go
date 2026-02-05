@@ -118,10 +118,9 @@ func (l *LinkedList) Reverse() {
 	var prev *Node = nil
 	var next *Node
 	for i := l.Head; i != nil; i = next {
-		next := i.Next
+		next = i.Next
 		i.Next = prev
 		prev = i
-		i = next
 	}
 }
 
@@ -131,4 +130,5 @@ func (l *LinkedList) PrintList() {
 		fmt.Println(i.data)
 	}
 }
+
 
