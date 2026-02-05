@@ -70,7 +70,7 @@ func main() {
 	linkedlist2.RemoveAt(0)
 	linkedlist2.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
-	linkedlist2.RemoveAt(6)
+	linkedlist2.RemoveAt(5)
 	linkedlist2.PrintList()
 	fmt.Println("The size of the linked list is:", linkedlist2.GetSize())
 	linkedlist2.Reverse()
