@@ -73,7 +73,7 @@ func (l *LinkedList) RemoveAll(value string) error {
 	j := 0
 	for i := l.Head; i != nil; i = i.Next {
 		if i.data == value {
-			l.RemoveAt(0)
+			l.RemoveAt(j)
 		}
 		j++
 	}
@@ -129,4 +129,3 @@ func (l *LinkedList) PrintList() {
 		fmt.Println(i.data)
 	}
 }
-
